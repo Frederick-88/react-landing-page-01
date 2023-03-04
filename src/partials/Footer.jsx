@@ -283,7 +283,7 @@ function Footer() {
             >
               ChenFrederick.com
             </a>
-            . All rights reserved.
+            &nbsp;- All rights reserved.
           </div>
         </div>
       </div>
