@@ -6,6 +6,23 @@ import FeaturesBg from "../images/features-bg.png";
 import FeaturesElement from "../images/features-element.png";
 
 function Features() {
+  const featureHeaderList = [
+    {
+      title: "Building the Xeno ecosystem",
+      description:
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+    {
+      title: "Ease of use",
+      description:
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+    {
+      title: "Next Level of Security",
+      description:
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+  ];
   const featureCount = [1, 2, 3];
   const [activeTab, setActiveTab] = useState(1);
 
@@ -62,7 +79,7 @@ function Features() {
 
               {/* Tabs buttons */}
               <div className="mb-8 md:mb-0">
-                {featureCount.map((index) => {
+                {featureHeaderList.map((feature, index) => {
                   return (
                     <button
                       key={index}
@@ -78,11 +95,10 @@ function Features() {
                     >
                       <div>
                         <div className="font-bold leading-snug tracking-tight mb-1">
-                          Building the Xeno ecosystem
+                          {feature.title}
                         </div>
                         <div className="text-gray-600">
-                          Take collaboration to the next level with security and
-                          administrative features built for teams.
+                          {feature.description}
                         </div>
                       </div>
                       <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
